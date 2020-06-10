@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+body {
+	color: #333;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	background: #05214f;
+}
+
+
+
+.searchTerm {
+  float: left;
+  width: 50%;
+  border: 3px solid #00B4CC;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  position: absolute;  
+  right: 150px;
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+
+.column div {
+	position: relative;
+	float: left;
+	width: 400px;
+	height: 300px;
+	margin: 1%;
+	padding: 0;
+}
+
+.column div span {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	z-index: -1;
+	display: inline;
+	width: 300px;
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-size: 20px;
+	text-decoration: none;
+	text-align: center;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	opacity: 0;
+}
+figure {
+	width: 400px;
+	height: 300px;
+	margin: 1%;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+}
+figure:hover+span {
+	bottom: -36px;
+	opacity: 1;
+}
+.hover07 figure img {
+	-webkit-filter: blur(3px);
+	filter: blur(3px);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover07 figure:hover img {
+	-webkit-filter: blur(0);
+	filter: blur(0);
+}
+
+
+</style>
+<body>
+
+<p>
+<div class="hover07 column">
+	<!forma vizualizare date>
+  <div>
+  	<a href="view_data.php">
+    <figure><img src="images/population.jpg" /></figure>
+    <span>Population</span>
+</a>
+  </div>
+  <div>
+  	<a href="view_data_e.php">
+    <figure><img src="images/economics.png" /></figure>
+    <span>GDP($ per capital)</span>
+</a>
+  </div>
+  <div>
+  	<a href="view_data_a.php">
+    <figure><img src="images/region.png" /></figure>
+    <span>Browse all entries</span>
+</a>
+  </div>
+
+
+   <div>
+   	<a href="view_data_c.php">
+    <figure><img src="images/density.jpg" /></figure>
+    <span>Population density (per. sq. mile)</span>
+</a>
+  </div>
+    <div>
+    <figure><img src="images/country.png" /></figure>
+
+    <span></span>
+        <div class="wrap">
+   <div class="search" >
+      	<form action="view_data_search.php" method="GET" >
+        <input type="text" name="query" placeholder="Search for a specific country..."/>
+        <input type="submit" value="Search" placeholder="Search for a specific country..." />
+    </form>
+     </button>
+   </div>
+</div>
+  </div>
+</div>
+
+
+</p>
+
+</body>
+</html>
